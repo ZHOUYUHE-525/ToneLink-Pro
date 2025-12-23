@@ -73,7 +73,7 @@ except:
     MY_GITHUB_TOKEN = "" # 新增这一行
 
 # ⚠️⚠️⚠️ 请在这里填入你的 GitHub 仓库名字！
-GITHUB_REPO_NAME = "zhouyuhe-525/tonelink-pro"
+GITHUB_REPO_NAME = "zhouyuhe-525/ToneLink-Pro"
 # ==========================================
 
 # --- 🌍 国际化字典 ---

@@ -1,0 +1,21 @@
+{
+    "title": "疯了",
+    "modules": [
+        "read",
+        "speak",
+        "listen",
+        "write"
+    ],
+    "read": [
+        "每天"
+    ],
+    "speak": [],
+    "listen": [],
+    "write": [
+        {
+            "hanzi": "视频",
+            "pinyin": "shìpín",
+            "russian": "видео, видеозапись"
+        }
+    ]
+}

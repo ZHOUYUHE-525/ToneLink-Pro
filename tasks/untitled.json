@@ -1,0 +1,35 @@
+{
+    "title": "",
+    "modules": [
+        "read",
+        "speak",
+        "listen",
+        "write"
+    ],
+    "read": [
+        "吃饭"
+    ],
+    "speak": [
+        {
+            "type": "翻译题 / Перевод",
+            "content": "что это?",
+            "ref": "",
+            "raw_type": "翻译题"
+        }
+    ],
+    "listen": [
+        {
+            "type": "复述 / Повторение",
+            "content": "我最喜欢秋天。",
+            "tts": "tts_40713cb715e026dc99efed408ee55fdf.mp3",
+            "raw_type": "复述"
+        }
+    ],
+    "write": [
+        {
+            "hanzi": "美丽",
+            "pinyin": "měilì",
+            "russian": "красивый; прекрасный"
+        }
+    ]
+}

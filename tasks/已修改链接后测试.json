@@ -1,0 +1,21 @@
+{
+    "title": "已修改链接后测试",
+    "modules": [
+        "read",
+        "speak",
+        "listen",
+        "write"
+    ],
+    "read": [
+        "可是"
+    ],
+    "speak": [],
+    "listen": [],
+    "write": [
+        {
+            "hanzi": "视频",
+            "pinyin": "shìpín",
+            "russian": "видео, видеозапись"
+        }
+    ]
+}

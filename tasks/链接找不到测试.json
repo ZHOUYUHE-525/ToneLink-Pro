@@ -1,0 +1,35 @@
+{
+    "title": "链接找不到测试",
+    "modules": [
+        "read",
+        "listen",
+        "speak",
+        "write"
+    ],
+    "read": [
+        "好吃"
+    ],
+    "speak": [
+        {
+            "type": "翻译题 / Перевод",
+            "content": "что это?",
+            "ref": "",
+            "raw_type": "翻译题"
+        }
+    ],
+    "listen": [
+        {
+            "type": "复述 / Повторение",
+            "content": "我最喜欢秋天",
+            "tts": "tts_90604a9f1e2554fcfe755c11c60e2b7f.mp3",
+            "raw_type": "复述"
+        }
+    ],
+    "write": [
+        {
+            "hanzi": "漂亮",
+            "pinyin": "piàoliang",
+            "russian": "красивый; привлекательный; отличный; великолепный (о результате)"
+        }
+    ]
+}

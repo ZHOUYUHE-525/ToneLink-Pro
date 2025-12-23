@@ -1,0 +1,13 @@
+streamlit
+pypinyin
+azure-cognitiveservices-speech
+librosa
+soundfile
+audio-recorder-streamlit
+pandas
+openai
+gTTS
+PyPDF2
+numpy
+cloudinary
+PyGithub

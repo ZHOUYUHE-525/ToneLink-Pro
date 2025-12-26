@@ -1,0 +1,131 @@
+{
+    "title": "缇娜（汉字1）",
+    "modules": [
+        "write"
+    ],
+    "read": [],
+    "speak": [],
+    "listen": [],
+    "write": [
+        {
+            "hanzi": "通知",
+            "pinyin": "tōngzhī",
+            "russian": "уведомлять; извещение, уведомление"
+        },
+        {
+            "hanzi": "挺",
+            "pinyin": "tǐng",
+            "russian": "довольно, совсем"
+        },
+        {
+            "hanzi": "符合",
+            "pinyin": "fúhé",
+            "russian": "соответствовать, отвечать требованиям"
+        },
+        {
+            "hanzi": "要求",
+            "pinyin": "yāoqiú",
+            "russian": "требование, требовать"
+        },
+        {
+            "hanzi": "材料",
+            "pinyin": "cáiliào",
+            "russian": "материал, документы"
+        },
+        {
+            "hanzi": "延长",
+            "pinyin": "yáncháng",
+            "russian": "продлить, увеличить срок"
+        },
+        {
+            "hanzi": "签证",
+            "pinyin": "qiānzhèng",
+            "russian": "виза"
+        },
+        {
+            "hanzi": "负责",
+            "pinyin": "fùzé",
+            "russian": "отвечать, быть ответственным"
+        },
+        {
+            "hanzi": "满意",
+            "pinyin": "mǎnyì",
+            "russian": "удовлетворённый, довольный"
+        },
+        {
+            "hanzi": "解决",
+            "pinyin": "jiějué",
+            "russian": "решить, урегулировать"
+        },
+        {
+            "hanzi": "提供",
+            "pinyin": "tígōng",
+            "russian": "предоставлять, предлагать"
+        },
+        {
+            "hanzi": "网购",
+            "pinyin": "wǎnggòu",
+            "russian": "покупки в интернете"
+        },
+        {
+            "hanzi": "服务",
+            "pinyin": "fúwù",
+            "russian": "обслуживание, сервис"
+        },
+        {
+            "hanzi": "机会",
+            "pinyin": "jīhuì",
+            "russian": "возможность, шанс"
+        },
+        {
+            "hanzi": "选择",
+            "pinyin": "xuǎnzé",
+            "russian": "выбор, выбирать"
+        },
+        {
+            "hanzi": "招聘",
+            "pinyin": "zhāopìn",
+            "russian": "нанимать, объявление о приёме на работу"
+        },
+        {
+            "hanzi": "应聘",
+            "pinyin": "yìngpìn",
+            "russian": "откликаться на вакансию, претендовать на должность"
+        },
+        {
+            "hanzi": "能力",
+            "pinyin": "nénglì",
+            "russian": "способность, компетенция"
+        },
+        {
+            "hanzi": "提高",
+            "pinyin": "tígāo",
+            "russian": "повысить, улучшить"
+        },
+        {
+            "hanzi": "有信心",
+            "pinyin": "yǒu xìnxīn",
+            "russian": "быть уверенным, иметь уверенность"
+        },
+        {
+            "hanzi": "困难",
+            "pinyin": "kùnnan",
+            "russian": "трудность, сложность"
+        },
+        {
+            "hanzi": "紧张",
+            "pinyin": "jǐnzhāng",
+            "russian": "нервничать, напряжённый"
+        },
+        {
+            "hanzi": "陪",
+            "pinyin": "péi",
+            "russian": "сопровождать, быть с кем-то"
+        },
+        {
+            "hanzi": "来不及",
+            "pinyin": "lái bu jí",
+            "russian": "не успеть, уже поздно"
+        }
+    ]
+}

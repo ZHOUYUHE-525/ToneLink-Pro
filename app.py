@@ -613,26 +613,129 @@ def save_submission(student_name, task_title):
     return True
 
 def generate_workbook_html(task_title, word_list):
-    html = f"""<!DOCTYPE html><html><head><meta charset="UTF-8"><style>
-    body{{font-family:"Kaiti SC","STKaiti","KaiTi","Arial";padding:40px}} h1{{text-align:center}}
-    .word-row{{display:flex;align-items:center;margin-bottom:20px;border-bottom:1px dashed #ccc;padding-bottom:10px}}
-    .info-box{{width:180px;text-align:center;margin-right:20px}} 
-    .hanzi-big{{font-size:40px;font-weight:bold}} 
-    .pinyin{{color:#555;font-weight:bold}} 
-    .russian{{color:#666;font-style:italic;font-size:12px; line-height:1.2; margin-top:5px;}} 
-    .tianzige{{width:60px;height:60px;border:2px solid #d9534f;margin-right:5px;position:relative;box-sizing:border-box}}
-    .tianzige:before{{content:'';position:absolute;top:0;left:50%;height:100%;border-left:1px dashed #d9534f}}
-    .tianzige:after{{content:'';position:absolute;top:50%;left:0;width:100%;border-top:1px dashed #d9534f}}
-    .trace{{position:absolute;width:100%;height:100%;text-align:center;line-height:56px;font-size:40px;color:#eee;z-index:1;font-family:"Kaiti SC","KaiTi"}}
-    @media print{{.no-print{{display:none}} body{{padding:0}}}}
-    </style></head><body>
-    <div class="no-print" style="text-align:center;background:#e8f5e9;padding:10px"><b>🖨️ {T('download_workbook')}</b></div>
-    <h1>📝 {task_title}</h1>"""
+    # 这里的 CSS 做了 A4 纸适配和打印优化
+    html = f"""<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{task_title} - 字帖</title>
+        <style>
+            @page {{ size: A4; margin: 20mm; }}
+            body {{ 
+                font-family: "Kaiti SC", "STKaiti", "KaiTi", "Microsoft YaHei", serif; 
+                margin: 0; padding: 20px; 
+                background-color: #f0f0f0; /* 背景灰，突出A4纸感 */
+                display: flex; justify-content: center;
+            }}
+            .page-container {{
+                background: white;
+                width: 210mm;
+                min-height: 297mm;
+                padding: 20mm;
+                box-shadow: 0 0 10px rgba(0,0,0,0.1);
+                box-sizing: border-box;
+            }}
+            h1 {{ text-align: center; color: #333; margin-bottom: 30px; }}
+            
+            /* 单词行样式 */
+            .word-row {{
+                display: flex; align-items: center; 
+                margin-bottom: 15px; 
+                border-bottom: 1px dashed #eee;
+                padding-bottom: 10px;
+            }}
+            .info-box {{ width: 120px; text-align: center; margin-right: 15px; }}
+            .pinyin {{ color: #666; font-size: 14px; font-weight: bold; }}
+            .hanzi-big {{ font-size: 32px; font-weight: normal; line-height: 1.2; }}
+            .russian {{ color: #888; font-style: italic; font-size: 12px; margin-top: 2px; }}
+            
+            /* 田字格核心样式 */
+            .grid-container {{ display: flex; flex: 1; }}
+            .tianzige {{
+                width: 48px; height: 48px; 
+                border: 1px solid #e74c3c; /* 红色边框 */
+                margin-right: 4px;
+                position: relative;
+                box-sizing: border-box;
+            }}
+            /* 田字格虚线 */
+            .tianzige:before {{
+                content: ''; position: absolute;
+                top: 0; left: 50%; height: 100%;
+                border-left: 1px dashed #f1948a; /* 浅红虚线 */
+            }}
+            .tianzige:after {{
+                content: ''; position: absolute;
+                top: 50%; left: 0; width: 100%;
+                border-top: 1px dashed #f1948a;
+            }}
+            /* 描红文字 */
+            .trace {{
+                position: absolute; width: 100%; height: 100%;
+                text-align: center; line-height: 44px;
+                font-size: 34px; color: #ddd; /* 浅灰色描红 */
+                z-index: 1; font-family: "Kaiti SC", "KaiTi", serif;
+            }}
+            
+            /* 打印控制：打印时隐藏按钮和背景 */
+            @media print {{
+                body {{ background: none; padding: 0; }}
+                .page-container {{ box-shadow: none; width: 100%; margin: 0; padding: 0; }}
+                .no-print {{ display: none !important; }}
+            }}
+            
+            /* 按钮样式 */
+            .btn-print {{
+                display: block; width: 100%; padding: 15px;
+                background: #4CAF50; color: white; text-align: center;
+                text-decoration: none; font-size: 18px; border-radius: 8px;
+                margin-bottom: 20px; cursor: pointer; border: none;
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            }}
+            .btn-print:hover {{ background: #45a049; }}
+        </style>
+    </head>
+    <body>
+        <div class="page-container">
+            <!-- 打印按钮 (打印时会自动消失) -->
+            <button class="no-print btn-print" onclick="window.print()">
+                🖨️ 点击此处保存为 PDF / 打印 (Print / Save as PDF)
+            </button>
+            
+            <!-- 提示语 -->
+            <div class="no-print" style="text-align:center; color:#666; margin-bottom:20px; font-size:12px;">
+                提示：在打印窗口中，目标打印机选择 "另存为 PDF" 即可保存。<br>
+                Tip: Select "Save as PDF" in the print destination.
+            </div>
+
+            <h1>📝 {task_title}</h1>
+    """
+    
     for item in word_list:
-        hanzi = item['hanzi']; grids = ""
-        for char in hanzi: grids += f'<div class="tianzige"><div class="trace">{char}</div></div>' + '<div class="tianzige"></div>'*7
-        html += f'<div class="word-row"><div class="info-box"><div class="pinyin">{item["pinyin"]}</div><div class="hanzi-big">{hanzi}</div><div class="russian">{item.get("russian", "")}</div></div><div style="display:flex">{grids}</div></div>'
-    return html + "</body></html>"
+        hanzi = item['hanzi']
+        grids = ""
+        # 生成田字格
+        for char in hanzi: 
+            # 第一个格显示描红，后面是空格
+            grids += f'<div class="tianzige"><div class="trace">{char}</div></div>' 
+            # 补充7个空白练习格
+            grids += '<div class="tianzige"></div>' * 7
+            
+        html += f"""
+        <div class="word-row">
+            <div class="info-box">
+                <div class="pinyin">{item["pinyin"]}</div>
+                <div class="hanzi-big">{hanzi}</div>
+                <div class="russian">{item.get("russian", "")}</div>
+            </div>
+            <div class="grid-container">
+                {grids}
+            </div>
+        </div>
+        """
+        
+    html += "</div></body></html>"
+    return html
 
 def save_task_to_file(task_data, filename=None):
     if not os.path.exists("tasks"): os.makedirs("tasks")

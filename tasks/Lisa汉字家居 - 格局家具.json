@@ -1,0 +1,116 @@
+{
+    "title": "Lisa汉字（家居 - 格局、家具）",
+    "modules": [
+        "write"
+    ],
+    "read": [],
+    "speak": [],
+    "listen": [],
+    "write": [
+        {
+            "hanzi": "卧室",
+            "pinyin": "wòshì",
+            "russian": "спальня"
+        },
+        {
+            "hanzi": "浴室",
+            "pinyin": "yùshì",
+            "russian": "ванная комната"
+        },
+        {
+            "hanzi": "几室几厅",
+            "pinyin": "jǐ shì jǐ tīng",
+            "russian": "сколько спален и гостиных"
+        },
+        {
+            "hanzi": "合",
+            "pinyin": "hé",
+            "russian": "совмещённый"
+        },
+        {
+            "hanzi": "分开",
+            "pinyin": "fēnkāi",
+            "russian": "раздельный"
+        },
+        {
+            "hanzi": "面积",
+            "pinyin": "miànjī",
+            "russian": "площадь"
+        },
+        {
+            "hanzi": "位置",
+            "pinyin": "wèizhi",
+            "russian": "расположение"
+        },
+        {
+            "hanzi": "幼儿园",
+            "pinyin": "yòu'éryuán",
+            "russian": "детский сад"
+        },
+        {
+            "hanzi": "风格",
+            "pinyin": "fēnggé",
+            "russian": "стиль"
+        },
+        {
+            "hanzi": "复古",
+            "pinyin": "fùgǔ",
+            "russian": "ретро, в стиле ретро"
+        },
+        {
+            "hanzi": "古代",
+            "pinyin": "gǔdài",
+            "russian": "древний, старинный"
+        },
+        {
+            "hanzi": "现代",
+            "pinyin": "xiàndài",
+            "russian": "современный"
+        },
+        {
+            "hanzi": "装修",
+            "pinyin": "zhuāngxiū",
+            "russian": "отделка, ремонт"
+        },
+        {
+            "hanzi": "建筑",
+            "pinyin": "jiànzhù",
+            "russian": "здание, архитектура"
+        },
+        {
+            "hanzi": "毯子",
+            "pinyin": "tǎnzi",
+            "russian": "ковёр, плед"
+        },
+        {
+            "hanzi": "柜子",
+            "pinyin": "guìzi",
+            "russian": "шкаф"
+        },
+        {
+            "hanzi": "衣柜",
+            "pinyin": "yīguì",
+            "russian": "гардероб, шкаф для одежды"
+        },
+        {
+            "hanzi": "餐具柜",
+            "pinyin": "cānjù guì",
+            "russian": "буфет, шкаф для посуды"
+        },
+        {
+            "hanzi": "浴缸",
+            "pinyin": "yùgāng",
+            "russian": "ванна"
+        },
+        {
+            "hanzi": "淋浴",
+            "pinyin": "línyù",
+            "russian": "душ"
+        },
+        {
+            "hanzi": "马桶",
+            "pinyin": "mǎtǒng",
+            "russian": "унитаз"
+        }
+    ]
+}

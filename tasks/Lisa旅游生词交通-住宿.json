@@ -1,0 +1,96 @@
+{
+    "title": "Lisa旅游生词（交通-住宿）",
+    "modules": [
+        "write"
+    ],
+    "read": [],
+    "speak": [],
+    "listen": [],
+    "write": [
+        {
+            "hanzi": "攻略",
+            "pinyin": "gōnglüè",
+            "russian": "гайд"
+        },
+        {
+            "hanzi": "旅游攻略",
+            "pinyin": "lǚyóu gōnglüè",
+            "russian": "туристический путеводитель"
+        },
+        {
+            "hanzi": "搜",
+            "pinyin": "sōu",
+            "russian": "искать, просматривать"
+        },
+        {
+            "hanzi": "详细",
+            "pinyin": "xiángxì",
+            "russian": "подробный"
+        },
+        {
+            "hanzi": "参观",
+            "pinyin": "cānguān",
+            "russian": "посещать, осматривать"
+        },
+        {
+            "hanzi": "景点",
+            "pinyin": "jǐngdiǎn",
+            "russian": "достопримечательность"
+        },
+        {
+            "hanzi": "推荐",
+            "pinyin": "tuījiàn",
+            "russian": "рекомендовать"
+        },
+        {
+            "hanzi": "踩雷",
+            "pinyin": "cǎi léi",
+            "russian": "наткнуться на проблему, разочароваться,наступить на мину"
+        },
+        {
+            "hanzi": "海滩",
+            "pinyin": "hǎitān",
+            "russian": "пляж"
+        },
+        {
+            "hanzi": "星级",
+            "pinyin": "xīngjí",
+            "russian": "звездный уровень, классификация по звездам"
+        },
+        {
+            "hanzi": "评价",
+            "pinyin": "píngjià",
+            "russian": "оценка, отзыв"
+        },
+        {
+            "hanzi": "差评",
+            "pinyin": "chā píng",
+            "russian": "негативный отзыв"
+        },
+        {
+            "hanzi": "普遍",
+            "pinyin": "pǔbiàn",
+            "russian": "распространённый, общий"
+        },
+        {
+            "hanzi": "欣赏",
+            "pinyin": "xīnshǎng",
+            "russian": "восхищаться, наслаждаться"
+        },
+        {
+            "hanzi": "位置",
+            "pinyin": "wèizhi",
+            "russian": "местоположение"
+        },
+        {
+            "hanzi": "之间",
+            "pinyin": "zhījiān",
+            "russian": "между"
+        },
+        {
+            "hanzi": "建",
+            "pinyin": "jiàn",
+            "russian": "строить, создавать"
+        }
+    ]
+}

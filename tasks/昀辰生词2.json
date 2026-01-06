@@ -1,0 +1,51 @@
+{
+    "title": "昀辰（生词2）",
+    "modules": [
+        "write"
+    ],
+    "read": [],
+    "speak": [],
+    "listen": [],
+    "write": [
+        {
+            "hanzi": "市区",
+            "pinyin": "shìqū",
+            "russian": "городской район, центр города"
+        },
+        {
+            "hanzi": "郊区",
+            "pinyin": "jiāoqū",
+            "russian": "пригород, окраина города"
+        },
+        {
+            "hanzi": "共同",
+            "pinyin": "gòngtóng",
+            "russian": "общий, совместный"
+        },
+        {
+            "hanzi": "从来",
+            "pinyin": "cónglái",
+            "russian": "всегда, с самого начала"
+        },
+        {
+            "hanzi": "不仅",
+            "pinyin": "bùjǐn",
+            "russian": "не только"
+        },
+        {
+            "hanzi": "熟悉",
+            "pinyin": "shúxī",
+            "russian": "быть хорошо знакомым (с чем-либо/кем-либо)"
+        },
+        {
+            "hanzi": "眼熟",
+            "pinyin": "yǎnshú",
+            "russian": "знакомый на вид"
+        },
+        {
+            "hanzi": "没印象了",
+            "pinyin": "méi yìnxiàng le",
+            "russian": "не помню"
+        }
+    ]
+}

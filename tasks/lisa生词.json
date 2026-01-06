@@ -1,0 +1,86 @@
+{
+    "title": "lisa(生词）",
+    "modules": [
+        "write"
+    ],
+    "read": [],
+    "speak": [],
+    "listen": [],
+    "write": [
+        {
+            "hanzi": "装饰",
+            "pinyin": "zhuāngshì",
+            "russian": "украшение, декорирование"
+        },
+        {
+            "hanzi": "外卖员",
+            "pinyin": "wàimàiyuán",
+            "russian": "курьер доставки еды"
+        },
+        {
+            "hanzi": "配送费",
+            "pinyin": "pèisòngfèi",
+            "russian": "плата за доставку"
+        },
+        {
+            "hanzi": "方式",
+            "pinyin": "fāngshì",
+            "russian": "способ, метод"
+        },
+        {
+            "hanzi": "常见",
+            "pinyin": "chángjiàn",
+            "russian": "распространённый, обычный"
+        },
+        {
+            "hanzi": "软件",
+            "pinyin": "ruǎnjiàn",
+            "russian": "программное обеспечение, приложение"
+        },
+        {
+            "hanzi": "靠",
+            "pinyin": "kào",
+            "russian": "полагаться, зависеть"
+        },
+        {
+            "hanzi": "预约",
+            "pinyin": "yùyuē",
+            "russian": "бронирование, предварительный заказ"
+        },
+        {
+            "hanzi": "氛围",
+            "pinyin": "fēnwéi",
+            "russian": "атмосфера, обстановка"
+        },
+        {
+            "hanzi": "设计",
+            "pinyin": "shèjì",
+            "russian": "дизайн, проектирование"
+        },
+        {
+            "hanzi": "小费",
+            "pinyin": "xiǎofèi",
+            "russian": "чаевые"
+        },
+        {
+            "hanzi": "取决于",
+            "pinyin": "qǔjuéyú",
+            "russian": "зависеть от"
+        },
+        {
+            "hanzi": "上菜",
+            "pinyin": "shàngcài",
+            "russian": "подача блюд"
+        },
+        {
+            "hanzi": "记录",
+            "pinyin": "jìlù",
+            "russian": "запись, протокол"
+        },
+        {
+            "hanzi": "精致",
+            "pinyin": "jīngzhì",
+            "russian": "изысканный, утончённый"
+        }
+    ]
+}

@@ -1,0 +1,81 @@
+{
+    "title": "昀辰（汉字3）",
+    "modules": [
+        "write"
+    ],
+    "read": [],
+    "speak": [],
+    "listen": [],
+    "write": [
+        {
+            "hanzi": "接受",
+            "pinyin": "jiēshòu",
+            "russian": "принимать, соглашаться"
+        },
+        {
+            "hanzi": "软",
+            "pinyin": "ruǎn",
+            "russian": "мягкий"
+        },
+        {
+            "hanzi": "打断",
+            "pinyin": "dǎduàn",
+            "russian": "прерывать, перебивать"
+        },
+        {
+            "hanzi": "模仿",
+            "pinyin": "mófǎng",
+            "russian": "подражать, имитировать"
+        },
+        {
+            "hanzi": "缺点",
+            "pinyin": "quēdiǎn",
+            "russian": "недостаток, слабость"
+        },
+        {
+            "hanzi": "优点",
+            "pinyin": "yōudiǎn",
+            "russian": "достоинство, преимущество"
+        },
+        {
+            "hanzi": "歧视",
+            "pinyin": "qíshì",
+            "russian": "дискриминация, предубеждение"
+        },
+        {
+            "hanzi": "尊重",
+            "pinyin": "zūnzhòng",
+            "russian": "уважать, почитать"
+        },
+        {
+            "hanzi": "好学",
+            "pinyin": "hàoxué",
+            "russian": "любознательный, стремящийся к знаниям"
+        },
+        {
+            "hanzi": "丰富",
+            "pinyin": "fēngfù",
+            "russian": "богатый, обильный"
+        },
+        {
+            "hanzi": "富有",
+            "pinyin": "fùyǒu",
+            "russian": "богатый, состоятельный"
+        },
+        {
+            "hanzi": "完全",
+            "pinyin": "wánquán",
+            "russian": "полностью, совершенно"
+        },
+        {
+            "hanzi": "幸福",
+            "pinyin": "xìngfú",
+            "russian": "счастье, благополучие"
+        },
+        {
+            "hanzi": "适合",
+            "pinyin": "shìhé",
+            "russian": "подходить, соответствовать"
+        }
+    ]
+}

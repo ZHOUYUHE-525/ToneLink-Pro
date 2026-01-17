@@ -1,0 +1,46 @@
+{
+    "title": "Никита（汉字-12课）",
+    "modules": [
+        "write"
+    ],
+    "read": [],
+    "speak": [],
+    "listen": [],
+    "write": [
+        {
+            "hanzi": "雪",
+            "pinyin": "xuě",
+            "russian": "снег"
+        },
+        {
+            "hanzi": "零",
+            "pinyin": "líng",
+            "russian": "ноль, нуль"
+        },
+        {
+            "hanzi": "度",
+            "pinyin": "dù",
+            "russian": "градус; мера; степень"
+        },
+        {
+            "hanzi": "穿",
+            "pinyin": "chuān",
+            "russian": "носить (одежду); прокалывать"
+        },
+        {
+            "hanzi": "进",
+            "pinyin": "jìn",
+            "russian": "входить; продвигаться"
+        },
+        {
+            "hanzi": "弟弟",
+            "pinyin": "dìdi",
+            "russian": "младший брат"
+        },
+        {
+            "hanzi": "近",
+            "pinyin": "jìn",
+            "russian": "близкий; недавний"
+        }
+    ]
+}

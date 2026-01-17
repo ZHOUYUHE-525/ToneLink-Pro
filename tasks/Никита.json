@@ -1,0 +1,61 @@
+{
+    "title": "Никита",
+    "modules": [
+        "write"
+    ],
+    "read": [],
+    "speak": [],
+    "listen": [],
+    "write": [
+        {
+            "hanzi": "唱歌",
+            "pinyin": "chànggē",
+            "russian": "петь, пение"
+        },
+        {
+            "hanzi": "男",
+            "pinyin": "nán",
+            "russian": "мужской, мужчина"
+        },
+        {
+            "hanzi": "孩子",
+            "pinyin": "háizi",
+            "russian": "ребёнок, дети"
+        },
+        {
+            "hanzi": "左边",
+            "pinyin": "zuǒbian",
+            "russian": "левая сторона, слева"
+        },
+        {
+            "hanzi": "右边",
+            "pinyin": "yòubian",
+            "russian": "правая сторона, справа"
+        },
+        {
+            "hanzi": "比",
+            "pinyin": "bǐ",
+            "russian": "сравнивать; чем (при сравнении)"
+        },
+        {
+            "hanzi": "便宜",
+            "pinyin": "piányi",
+            "russian": "дешёвый, недорогой"
+        },
+        {
+            "hanzi": "说话",
+            "pinyin": "shuōhuà",
+            "russian": "говорить, разговаривать"
+        },
+        {
+            "hanzi": "可能",
+            "pinyin": "kěnéng",
+            "russian": "возможно, вероятно"
+        },
+        {
+            "hanzi": "姓",
+            "pinyin": "xìng",
+            "russian": "фамилия; носить фамилию"
+        }
+    ]
+}

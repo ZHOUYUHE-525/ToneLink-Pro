@@ -1418,85 +1418,81 @@ def page_edit():
                                 if st.button("🗑️", key=f"dsp{idx}"): data['speak'].pop(idx); st.rerun()
         
             elif mod == 'listen':
-                c1,c2 = st.columns([1,2])
-                with c1: 
-                    lt = st.radio("Type", [T("lt_rep"),T("lt_qa"),T("lt_cloze"),T("lt_tone")], key="rl")
+                c1, c2 = st.columns([1, 2])
+                with c1:
+                    # 题型选择
+                    lt = st.radio("Type", [T("lt_rep"), T("lt_qa"), T("lt_cloze"), T("lt_tone")], key="rl")
                 with c2:
                     with st.form("ls", clear_on_submit=True):
-                        # 修复：输入框干净
-                        c = st.text_input("内容/完整句", value="", key=f"ls_c_{lt}", placeholder="例如：我_喜欢秋天 (用下划线表示挖空位置)")
+                        # 输入框
+                        c = st.text_input("内容/完整句", key=f"ls_c_{lt}", placeholder="例如：我_喜欢秋天")
                         w = st.text_input("挖空答案/字", key=f"ls_w_{lt}", placeholder="例如：最")
-                        
+
                         # 提交按钮
                         if st.form_submit_button(T("btn_add")):
-                            # 1. 基础信息处理
-                            f = get_tts_audio(c) # 生成语音
-                            
-                            # 构建显示标题
-                            l_title = lt
-                            if lt==T("lt_rep"): l_title += " / Повторение"
-                            elif lt==T("lt_qa"): l_title += " / Вопрос"
-                            elif lt==T("lt_cloze"): l_title += " / Пропуски"
-                            elif lt==T("lt_tone"): l_title += " / Тоны"
+                            # 1. 生成语音 (TTS)
+                            f = get_tts_audio(c)
 
-                            # 创建题目对象
+                            # 2. 构建标题
+                            l_title = lt
+                            if lt == T("lt_rep"): l_title += " / Повторение"
+                            elif lt == T("lt_qa"): l_title += " / Вопрос"
+                            elif lt == T("lt_cloze"): l_title += " / Пропуски"
+                            elif lt == T("lt_tone"): l_title += " / Тоны"
+
+                            # 3. 创建基础对象
                             q = {'type': l_title, 'content': c, 'tts': f, 'raw_type': lt}
-                            
-                            # 2. 特殊题型处理 (填空 & 辨调)
-                            if "填空" in l_title or "Пропуски" in l_title:
-                                # 校验：必须填写答案
+
+                            # 4. 特殊题型处理
+                            if "填空" in str(lt) or "Пропуски" in str(lt):
                                 if not w:
-                                    st.error("⚠️ 填空题必须填写'挖空答案'！")
-                                    st.stop() # 停止运行，防止添加空数据
-                                    
-                                # AI 生成干扰项
-                                with st.spinner(f"AI 正在为 '{w}' 生成混淆干扰项..."):
-                                    try:
-                                        # 确保你的 generate_distractors_via_ai 函数定义在全局且已生效
-                                        distractors = generate_distractors_via_ai(c, w, DEEPSEEK_API_KEY)
-                                    except Exception as e:
-                                        # 如果AI出错，使用默认干扰项，保证程序不崩
-                                        print(f"AI Error: {e}") 
-                                        distractors = ["干扰A", "干扰B", "干扰C"]
-                                    
-                                    # 组合选项并打乱
-                                    all_options = [w] + distractors
-                                    random.shuffle(all_options)
-                                    
-                                    # 更新题目数据
-                                    q.update({
-                                        'display': c.replace(w, "______"),
-                                        'correct': w,
-                                        'options': all_options
-                                    })
-                            
-                            elif "辨调" in l_title: 
+                                    st.error("⚠️ 填空题必须填写答案！")
+                                    st.stop()
+                                
+                                # AI 生成干扰项 (带容错，防止AI超时报错)
+                                try:
+                                    with st.spinner("AI Generating..."):
+                                        dists = generate_distractors_via_ai(c, w, DEEPSEEK_API_KEY)
+                                except:
+                                    dists = ["干扰A", "干扰B", "干扰C"]
+                                
+                                opts = [w] + dists
+                                random.shuffle(opts)
+                                q.update({'display': c.replace(w, "__"), 'correct': w, 'options': opts})
+
+                            elif "辨调" in str(lt) or "Тоны" in str(lt):
                                 o, co = generate_tone_options_smart(c)
                                 q.update({'text': c, 'options': o, 'correct': co})
-                            
-                            # 3. 保存数据 (重点！！！这行代码必须和上面的 if/elif 对齐，不能缩进进去)
+
+                            # 5. 保存数据 (关键！这行必须和上面的 if/elif 对齐，不能缩进进去)
                             data['listen'].append(q)
-                            
-                            # 4. 刷新页面
                             st.rerun()
-                
-                # 下方显示题目列表预览
-                grouped = {}
-                for q in data['listen']:
-                    t = q.get('raw_type', q.get('type', 'Other'))
-                    if t not in grouped: grouped[t] = []
-                    grouped[t].append(q)
-                for t, qs in grouped.items():
-                    with st.expander(f"{t} ({len(qs)})", expanded=False):
-                        for idx, q in enumerate(data['listen']):
-                            if q.get('raw_type', q.get('type')) == t:
-                                if q.get('tts'): st.audio(q['tts'])
-                                if "填空" in str(q.get('type')):
-                                    st.write(f"题目: {q.get('display')} | 答案: {q.get('correct')} | 选项: {q.get('options')}")
-                                else:
-                                    st.write(q['content'])
+
+                # --- 预览列表 (放在 Form 外面，防止嵌套报错) ---
+                if data['listen']:
+                    st.markdown("---")
+                    st.caption(f"📋 已添加题目 ({len(data['listen'])})")
+                    
+                    for idx, q in enumerate(data['listen']):
+                        # 获取显示的标题（如果是填空，显示带下划线的）
+                        label = q.get('display', q.get('content', ''))
+                        
+                        with st.expander(f"{idx+1}. {q.get('type')} : {label[:20]}...", expanded=False):
+                            st.write(f"**内容**: {q.get('content')}")
+                            
+                            # 重新生成/获取音频 (防止服务器重启后丢失)
+                            if q.get('content'):
+                                try:
+                                    tts_file = get_tts_audio(q['content'])
+                                    if tts_file: st.audio(tts_file)
+                                except: pass
+
+                            if "填空" in str(q.get('type')):
+                                st.success(f"答案: {q.get('correct')} | 选项: {q.get('options')}")
                                 
-                                if st.button("🗑️", key=f"dl{idx}"): data['listen'].pop(idx); st.rerun()
+                            if st.button("🗑️ 删除此题", key=f"dl{idx}"): 
+                                data['listen'].pop(idx)
+                                st.rerun()
 
             elif mod == 'write':
                 c1,c2,c3 = st.columns([1,2,2])
